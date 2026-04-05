@@ -10,7 +10,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1 
 
 # Copy requirements first (for caching)
-COPY ./src_code/requirements.txt .
+COPY requirements.txt .
 
 # Install Python dependencies
 RUN pip install --upgrade pip && pip install -r requirements.txt
@@ -22,4 +22,4 @@ COPY . .
 EXPOSE 5000
 
 # Run app using gunicorn (production server)
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "src_code.app:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "app:app"]
