@@ -5,7 +5,7 @@ resource "aws_instance" "python_webserver" {
   subnet_id            = aws_subnet.subnet.id
   region               = var.region
   iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
-
+  vpc_security_group_ids = [ aws_security_group.web_sg.id ]
   user_data = <<-EOF
               #! /bin/bash
               yum update -y

@@ -35,9 +35,10 @@ resource "aws_iam_policy" "ecr_policy" {
           "ecr:CompleteLayerUpload",
           "ecr:UploadLayerPart",
           "ecr:InitiateLayerUpload",
-          "ecr:PutImage"
+          "ecr:PutImage",
+          "ecr:BatchGetImage"
         ]
-        Resource = aws_ecr_repository.repo.arn
+        Resource = aws_ecr_repository.flask.arn
       },
       {
         Effect = "Allow"

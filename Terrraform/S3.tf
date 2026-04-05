@@ -1,6 +1,6 @@
 
 resource "aws_s3_bucket" "state_bucket" {
-  bucket = "s3_terraform_state"
+  bucket = "s3-terraform-state-my-demo"
   tags = {
     Name = "Terraform State Storage Bucket"
   }
