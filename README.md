@@ -11,6 +11,7 @@ This project demonstrates my ability to design and implement a "real-world DevOp
 It simulates a production scenario where:
 
 ⇒ Infrastructure is provisioned using "Terraform"
+
 ⇒ Application is containerized using "Docker"
 ⇒ CI/CD pipeline is built using "GitHub Actions"
 ⇒ Deployment is automated to "Amazon EC2 via ECR"
