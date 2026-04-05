@@ -36,7 +36,8 @@ resource "aws_iam_policy" "ecr_policy" {
           "ecr:UploadLayerPart",
           "ecr:InitiateLayerUpload",
           "ecr:PutImage",
-          "ecr:BatchGetImage"
+          "ecr:BatchGetImage",
+          "ecr:GetDownloadUrlForLayer"
         ]
         Resource = aws_ecr_repository.flask.arn
       },
