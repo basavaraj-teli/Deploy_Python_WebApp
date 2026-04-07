@@ -5,3 +5,5 @@ Subnet_CIDR_list = ["10.0.0.0/26", "10.0.0.64/26"]
 region           = "ap-south-1"
 ports            = ["22", "80", "443"]
 ECR_repo         = "python_webapp_repo"
+bucket_name = "s3-terraform-state-my-demo"
+dynamodb_table_name = "state_locking_table"

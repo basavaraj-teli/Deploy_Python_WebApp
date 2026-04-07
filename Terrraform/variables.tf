@@ -31,6 +31,16 @@ variable "ports" {
 }
 
 variable "ECR_repo" {
-  type = string
+  type        = string
+  description = "ECR repo to push images"
 }
 
+variable "bucket_name" {
+  type        = string
+  description = "S3 bucket to store terraform state file"
+}
+
+variable "dynamodb_table_name" {
+  type        = string
+  description = "Dynamodb table to store LockId, which helps in state locking."
+}
