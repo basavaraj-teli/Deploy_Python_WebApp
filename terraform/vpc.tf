@@ -4,7 +4,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_support   = true
 
   tags = {
-    Name = "vpc_tf"
+    Name = var.vpc_name
   }
 }
 
@@ -15,21 +15,21 @@ resource "aws_subnet" "subnet" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "public_subnet_tf"
+    Name = var.aws_subnet_name
   }
 }
 
 resource "aws_internet_gateway" "IG" {
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name = "IG_tf"
+    Name = var.ig_name
   }
 }
 
 resource "aws_route_table" "route_table" {
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name = "Public_RT_tf"
+    Name = var.aws_route_table_name
   }
 }
 

@@ -9,10 +9,20 @@ variable "ami" {
   description = "AMI ID to create an EC2 instance for web server"
 }
 
+variable "ec2_instance_name" {
+  type        = string
+  description = "AWS EC2 instance name"
+}
+
 variable "region" {
   type        = string
   default     = "ap-south-1"
   description = "AWS region where web server will be deployed"
+}
+
+variable "vpc_name" {
+  type        = string
+  description = "AWS VPC name"
 }
 
 variable "vpc_cidr" {
@@ -20,9 +30,29 @@ variable "vpc_cidr" {
   description = "CIDR for VPC"
 }
 
+variable "ig_name" {
+  type        = string
+  description = "AWS IG name"
+}
+
 variable "Subnet_CIDR_list" {
   type        = list(string)
   description = "CIDR for subnet"
+}
+
+variable "aws_route_table_name" {
+  type        = string
+  description = "AWS route table name"
+}
+
+variable "aws_subnet_name" {
+  type        = string
+  description = "AWS subnet name"
+}
+
+variable "security_group_name" {
+  type        = string
+  description = "Security group name"
 }
 
 variable "ports" {
@@ -43,4 +73,19 @@ variable "bucket_name" {
 variable "dynamodb_table_name" {
   type        = string
   description = "Dynamodb table to store LockId, which helps in state locking."
+}
+
+variable "ec2_role" {
+  type        = string
+  description = "EC2 assume role for ECR, to be attached to instance profile"
+}
+
+variable "instance_profile" {
+  type        = string
+  description = "Instance profile name"
+}
+
+variable "ec2_ecr_iam_policy" {
+  type        = string
+  description = "EC2 and ECR IAM policy"
 }

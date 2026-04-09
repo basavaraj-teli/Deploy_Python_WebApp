@@ -36,5 +36,7 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-Terrraform/terraform_key.pub
-Terrraform/terraform_key
+terraform/terraform_key.pub
+terraform/terraform_key
+terraform-modules/terraform_key
+terraform-modules/terraform_key.pub

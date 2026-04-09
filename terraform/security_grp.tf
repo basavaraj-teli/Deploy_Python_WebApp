@@ -1,5 +1,5 @@
 resource "aws_security_group" "web_sg" {
-  name        = "web-server-sg"
+  name        = var.security_group_name
   description = "Security group for public web servers"
   vpc_id      = aws_vpc.vpc.id
 }
