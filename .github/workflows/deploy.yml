@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  AWS_EC2: "ecr-push-webserver"
+  AWS_EC2: "Webserver"
   ECR_REPO: "python_webapp_repo"
   GIT_SHA: ${{ github.sha }}
 
